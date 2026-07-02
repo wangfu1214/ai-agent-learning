@@ -1,5 +1,6 @@
 package com.wangfu.week01_chat.controller;
 
+import com.wangfu.week01_chat.record.WeatherRecord;
 import com.wangfu.week01_chat.tool.CalculatorTool;
 import com.wangfu.week01_chat.tool.TimeTool;
 import com.wangfu.week01_chat.tool.WeatherTool;
@@ -10,21 +11,30 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ToolController {
 
+    private final TimeTool timeTool;
+
+    private final CalculatorTool calculatorTool;
+
+    private final WeatherTool weatherTool;
+
+    public ToolController(TimeTool timeTool, CalculatorTool calculatorTool, WeatherTool weatherTool) {
+        this.timeTool = timeTool;
+        this.calculatorTool = calculatorTool;
+        this.weatherTool = weatherTool;
+    }
+
     @GetMapping("/time")
     public String time() {
-        TimeTool timeTool = new TimeTool();
         return timeTool.currentTime();
     }
 
     @GetMapping("/add")
-    public Integer add(@RequestParam int a, @RequestParam int b){
-        CalculatorTool calculatorTool = new CalculatorTool();
+    public int add(@RequestParam int a, @RequestParam int b){
         return calculatorTool.add(a, b);
     }
 
     @GetMapping("/weather")
-    public String weather (@RequestParam String city) {
-        WeatherTool weatherTool = new WeatherTool();
+    public WeatherRecord weather (@RequestParam String city) {
         return weatherTool.weather(city);
     }
 }
