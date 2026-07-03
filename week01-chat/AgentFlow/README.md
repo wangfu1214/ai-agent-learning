@@ -21,3 +21,25 @@ based on Spring Boot & Spring AI.
 ⬜ Sprint3
 
 ...
+## Sprint 2
+
+### AI Core
+
+- AIContext
+- PromptManager
+- ToolRegistry
+- ChatExecutor
+- AgentTool
+
+### Business Domain
+
+- OrderTool
+- OrderService
+- OrderRepository
+
+### Features
+
+- Prompt 管理
+- Tool 注册中心
+- AI 上下文
+- 企业业务 Tool

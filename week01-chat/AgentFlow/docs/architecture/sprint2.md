@@ -1,31 +1,22 @@
 graph TD
 
 A[ChatController]
-
 B[ChatService]
-
 C[ChatExecutor]
 
 D[PromptManager]
-
 E[ToolRegistry]
-
 F[ChatClient]
 
-G[OrderTool]
-
+G[TimeTool]
 H[WeatherTool]
-
-I[TimeTool]
-
-J[CalculatorTool]
+I[CalculatorTool]
+J[OrderTool]
 
 K[OrderService]
-
 L[OrderRepository]
 
 A --> B
-
 B --> C
 
 C --> D
@@ -37,6 +28,5 @@ E --> H
 E --> I
 E --> J
 
-G --> K
-
+J --> K
 K --> L
