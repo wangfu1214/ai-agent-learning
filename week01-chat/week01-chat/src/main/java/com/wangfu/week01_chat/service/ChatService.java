@@ -1,5 +1,7 @@
 package com.wangfu.week01_chat.service;
 
+import com.wangfu.week01_chat.response.ChatResponse;
+
 public interface ChatService {
 
     /**
@@ -8,5 +10,5 @@ public interface ChatService {
      * @param message 入口参数
      * @return
      */
-    String chat(String message);
+    ChatResponse chat(String message);
 }

@@ -18,3 +18,23 @@
 ## 下一步
 
 - Tool Calling
+- 
+  AI Agent Learning
+  │
+  ├── Sprint1
+  │     Spring AI Chat Foundation      ✅
+  │
+  ├── Sprint2
+  │     AI Core Architecture
+  │
+  ├── Sprint3
+  │     RAG
+  │
+  ├── Sprint4
+  │     Memory
+  │
+  ├── Sprint5
+  │     MCP
+  │
+  └── Sprint6
+  Enterprise AI Assistant
