@@ -1,15 +1,15 @@
 package com.wangfu.agentflow.order.tool;
 
-import com.wangfu.agentflow.ai.tool.AgentTool;
+import com.wangfu.agentflow.ai.tool.annotation.AgentTool;
 import com.wangfu.agentflow.order.model.OrderInfo;
 import com.wangfu.agentflow.order.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Component;
 
-@Component
 @RequiredArgsConstructor
-public class OrderTool implements AgentTool {
+@AgentTool(name = "order", description = "订单查询工具", category = "business")
+public class OrderTool {
 
     private final OrderService orderService;
 
