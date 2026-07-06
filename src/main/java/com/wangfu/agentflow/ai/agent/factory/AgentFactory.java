@@ -1,6 +1,7 @@
 package com.wangfu.agentflow.ai.agent.factory;
 
 import com.wangfu.agentflow.ai.agent.Agent;
+import com.wangfu.agentflow.ai.model.ModelOptions;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,9 @@ public class AgentFactory {
 
     public Agent create(com.wangfu.agentflow.ai.agent.annotation.Agent agent) {
         return Agent.builder()
-                .model(agent.model())
+                .modelOptions(ModelOptions.builder()
+                        .model(agent.model())
+                        .build())
                 .name(agent.name())
                 .description(agent.description())
                 .systemPromptName(agent.systemPrompt())

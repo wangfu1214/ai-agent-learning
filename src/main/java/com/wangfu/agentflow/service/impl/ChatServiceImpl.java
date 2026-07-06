@@ -1,5 +1,7 @@
 package com.wangfu.agentflow.service.impl;
 
+import com.wangfu.agentflow.ai.agent.AgentRequest;
+import com.wangfu.agentflow.ai.agent.AgentResponse;
 import com.wangfu.agentflow.ai.context.AIContext;
 import com.wangfu.agentflow.ai.agent.AgentExecutor;
 import com.wangfu.agentflow.response.ChatResponse;
@@ -17,16 +19,13 @@ public class ChatServiceImpl implements ChatService {
 
     @Override
     public ChatResponse chat(String message) {
-        AIContext context = new AIContext(
-                "default-user",
-                "default-session",
-                "deepseek-chat",
-                Locale.CHINA
-        );
-        String answer = agentExecutor.execute(context, message);
+        AgentRequest request = AgentRequest.builder()
+                .userMessage(message)
+                .build();
+        AgentResponse response = agentExecutor.execute("default-agent", request);
         return ChatResponse.builder()
                 .model("")
-                .answer(answer)
+                .answer(response.getAnswer())
                 .elapsed(0L)
                 .promptTokens(0)
                 .completionTokens(0)

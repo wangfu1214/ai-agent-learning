@@ -1,5 +1,6 @@
 package com.wangfu.agentflow.ai.agent;
 
+import com.wangfu.agentflow.ai.model.ModelOptions;
 import lombok.Builder;
 import lombok.Data;
 
@@ -30,9 +31,9 @@ public class Agent {
     private List<String> toolNames;
 
     /**
-     * 使用的模型名称
+     * 使用模型信息
      */
-    private String model;
+    private ModelOptions modelOptions;
 
     /**
      * 是否启用

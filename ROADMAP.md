@@ -58,12 +58,14 @@ Status: Done
 
 Status: Done
 
-### v0.6
+### v0.6 - Execution Runtime
 
-Workflow
+- AgentRuntime
+- ModelInvoker
+- Spring AI model adapter
+- ModelRouter
 
-- Task orchestration
-- Multi-step execution
+Status: Planned
 
 ### v0.7
 
