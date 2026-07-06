@@ -1,22 +1,30 @@
 package com.wangfu.agentflow.ai.prompt;
 
-public final class PromptTemplate {
+import lombok.Builder;
+import lombok.Data;
 
-    private PromptTemplate (){
+@Data
+@Builder
+public class PromptTemplate {
 
-    }
+    /**
+     * 模板唯一名称
+     */
+    private String name;
 
+    /**
+     * Prompt 内容
+     */
+    private String content;
 
-    public static final String DEFAULT_SYSTEM = """
-            你是一名企业 AI 助手。
+    /**
+     * Prompt 描述
+     */
+    private String description;
 
-            请使用中文回答。
+    /**
+     * 是否启用
+     */
+    private boolean enabled;
 
-            回答简洁。
-
-            不知道请明确说明不知道。
-
-            如果可以使用工具，请优先调用工具。
-
-            """;
 }

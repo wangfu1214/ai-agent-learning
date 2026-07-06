@@ -33,6 +33,7 @@ Framework Foundation
 - AgentTool Annotation
 - Tool Metadata
 - Auto Tool Discovery
+- ✅
 
 ### v0.4
 

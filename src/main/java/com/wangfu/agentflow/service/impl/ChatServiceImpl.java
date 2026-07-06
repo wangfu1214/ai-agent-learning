@@ -1,7 +1,7 @@
 package com.wangfu.agentflow.service.impl;
 
 import com.wangfu.agentflow.ai.context.AIContext;
-import com.wangfu.agentflow.ai.executor.ChatExecutor;
+import com.wangfu.agentflow.ai.agent.AgentExecutor;
 import com.wangfu.agentflow.response.ChatResponse;
 import com.wangfu.agentflow.service.ChatService;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +13,7 @@ import java.util.Locale;
 @RequiredArgsConstructor
 public class ChatServiceImpl implements ChatService {
 
-    private final ChatExecutor chatExecutor;
+    private final AgentExecutor agentExecutor;
 
     @Override
     public ChatResponse chat(String message) {
@@ -23,7 +23,7 @@ public class ChatServiceImpl implements ChatService {
                 "deepseek-chat",
                 Locale.CHINA
         );
-        String answer = chatExecutor.execute(context, message);
+        String answer = agentExecutor.execute(context, message);
         return ChatResponse.builder()
                 .model("")
                 .answer(answer)

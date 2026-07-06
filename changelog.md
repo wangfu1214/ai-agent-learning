@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is inspired by Keep a Changelog and follows Semantic Versioning.
 
+## [0.3.0] - 2026-07
+
+### Added
+
+- Introduced annotation-driven Tool Framework.
+- Added ToolMetadata and ToolDefinition.
+- Added ToolScanner for automatic tool discovery.
+- Added ToolRegistry for centralized tool management.
+- Introduced @AgentTool annotation.
+
 ## [0.2.0] - 2026-07
 
 ### Added
