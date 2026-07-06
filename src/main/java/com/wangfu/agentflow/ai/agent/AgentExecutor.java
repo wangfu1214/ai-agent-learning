@@ -1,5 +1,6 @@
 package com.wangfu.agentflow.ai.agent;
 
+import com.wangfu.agentflow.ai.agent.resolver.AgentResolver;
 import com.wangfu.agentflow.ai.prompt.PromptContext;
 import com.wangfu.agentflow.ai.prompt.PromptRenderer;
 import com.wangfu.agentflow.ai.prompt.PromptTemplate;
@@ -20,6 +21,8 @@ public class AgentExecutor {
     private final ToolRegistry toolRegistry;
 
     private final PromptRenderer promptRenderer;
+
+    private final AgentResolver agentResolver;
 
     public AgentResponse execute(Agent agent, AgentRequest request) {
         try {
@@ -57,5 +60,10 @@ public class AgentExecutor {
                     .model(request.getModel() != null ? request.getModel() : agent.getModel())
                     .build();
         }
+    }
+
+    public AgentResponse execute(String agentName, AgentRequest request) {
+        Agent agent = agentResolver.resolve(agentName);
+        return execute(agent, request);
     }
 }
