@@ -1,10 +1,9 @@
 package com.wangfu.agentflow.ai.agent;
 
-import com.wangfu.agentflow.ai.context.AIContext;
 import com.wangfu.agentflow.ai.prompt.PromptContext;
 import com.wangfu.agentflow.ai.prompt.PromptRenderer;
 import com.wangfu.agentflow.ai.prompt.PromptTemplate;
-import com.wangfu.agentflow.ai.registry.ToolRegistry;
+import com.wangfu.agentflow.ai.tool.registry.ToolRegistry;
 import com.wangfu.agentflow.ai.prompt.PromptManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;

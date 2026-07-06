@@ -1,4 +1,4 @@
-package com.wangfu.agentflow.ai.registry;
+package com.wangfu.agentflow.ai.tool.registry;
 
 import com.wangfu.agentflow.ai.tool.ToolDefinition;
 import com.wangfu.agentflow.ai.tool.scanner.ToolScanner;
