@@ -56,7 +56,7 @@ Status: Done
 - ModelRouter
 - Spring AI model adapter
 
-Status: Planned
+Status: Done
 
 ### v0.6
 

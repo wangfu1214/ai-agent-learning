@@ -1,0 +1,16 @@
+@Agent
+│
+▼
+AgentScanner
+│
+▼
+AgentFactory
+│
+▼
+AgentRegistry
+│
+▼
+AgentResolver
+│
+▼
+AgentExecutor
