@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 The format is inspired by Keep a Changelog and follows Semantic Versioning.
 
+## [0.4.0] - 2026-07
+
+### Added
+
+- Added PromptTemplate.
+- Added PromptLoader for loading prompt files from resources.
+- Added PromptManager for prompt registration and lookup.
+- Added PromptRenderer for prompt variable rendering.
+- Added PromptVariables.
+- Added PromptContext.
+- Added Agent model.
+- Added AgentRequest and AgentResponse.
+- Added AgentExecutor as the first Agent execution pipeline.
+
+### Changed
+
+- Refactored execution flow from chat-based execution to agent-based execution.
+
 ## [0.3.0] - 2026-07
 
 ### Added

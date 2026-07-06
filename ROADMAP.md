@@ -37,17 +37,26 @@ Framework Foundation
 
 ### v0.4
 
-Model Router
+- PromptTemplate
+- PromptLoader
+- PromptManager
+- PromptRenderer
+- PromptVariables
+- PromptContext
+- Agent
+- AgentRequest
+- AgentResponse
+- AgentExecutor
 
-- Multiple LLM support
-- Context-based routing
+Status: Done
 
 ### v0.5
 
-Memory
+- ModelInvoker
+- ModelRouter
+- Spring AI model adapter
 
-- Conversation Memory
-- Memory SPI
+Status: Planned
 
 ### v0.6
 
