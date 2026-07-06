@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is inspired by Keep a Changelog and follows Semantic Versioning.
 
+## [0.5.0] - 2026-07
+
+### Added
+
+- Added @Agent annotation.
+- Added AgentFactory.
+- Added AgentScanner.
+- Added AgentRegistry.
+- Added AgentResolver.
+- Added agent-name based execution support.
+
+### Changed
+
+- Improved Agent execution API with `execute(String agentName, AgentRequest request)`.
+
 ## [0.4.0] - 2026-07
 
 ### Added
