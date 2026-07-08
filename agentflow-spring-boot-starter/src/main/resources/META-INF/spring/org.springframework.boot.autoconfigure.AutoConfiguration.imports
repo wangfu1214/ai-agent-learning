@@ -1,1 +1,2 @@
 com.wangfu.agentflow.autoconfigure.AgentFlowAutoConfiguration
+com.wangfu.agentflow.autoconfigure.ChatClientAutoConfiguration

@@ -1,6 +1,7 @@
 package com.wangfu.agentflow.ai.prompt;
 
 import com.wangfu.agentflow.ai.prompt.constant.PromptConstants;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
