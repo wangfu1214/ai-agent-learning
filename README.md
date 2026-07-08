@@ -1,18 +1,14 @@
 # AgentFlow
 
-> Build AI Agents, not AI demos.
-
-AgentFlow is an open-source Java AI Agent framework built with Spring Boot and Spring AI.
-
-It is designed for Java developers who want to build production-ready AI Agent systems with clean architecture, extensible tools, and enterprise-grade engineering practices.
+Enterprise AI Agent Framework based on Spring Boot and Spring AI.
 
 ## Features
 
-- AI Context
-- Prompt Management
-- Tool Registry
-- Chat Executor
-- Business Tool Integration
+- Annotation-driven Agent
+- Tool Framework
+- Prompt Framework
+- Model Abstraction
+- Spring Boot Starter
 
 ## 🚀 Quick Start
 

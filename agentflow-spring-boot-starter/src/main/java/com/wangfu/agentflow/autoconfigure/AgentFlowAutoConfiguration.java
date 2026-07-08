@@ -2,6 +2,7 @@ package com.wangfu.agentflow.autoconfigure;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -12,5 +13,6 @@ import org.springframework.context.annotation.Configuration;
         matchIfMissing = true
 )
 @EnableConfigurationProperties(AgentFlowProperties.class)
+@ComponentScan(basePackages = "com.wangfu.agentflow.ai")
 public class AgentFlowAutoConfiguration {
 }

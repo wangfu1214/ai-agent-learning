@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is inspired by Keep a Changelog and follows Semantic Versioning.
 
+## [0.7.0] - 2026-07
+
+### Added
+
+- Introduced multi-module architecture.
+- Added agentflow-core module.
+- Added spring boot starter module.
+- Added AutoConfiguration support.
+- Added AgentFlowProperties.
+- Added ChatClientAutoConfiguration.
+- Added conditional configuration support.
+
+### Changed
+
+- Demo application now consumes AgentFlow through starter dependency.
+- Framework beans are provided by starter instead of demo configuration.
+
 ## [0.5.0] - 2026-07
 
 ### Added

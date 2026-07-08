@@ -1,6 +1,6 @@
 spring:
   application:
-    name: week01-chat
+    name: agent-flow-demo
   ai:
     openai:
       api-key: ${DEEPSEEK_API_KEY}
