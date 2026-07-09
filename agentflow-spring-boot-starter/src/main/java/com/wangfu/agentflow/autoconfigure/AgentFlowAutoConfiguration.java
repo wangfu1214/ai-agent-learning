@@ -1,7 +1,10 @@
 package com.wangfu.agentflow.autoconfigure;
 
+import com.wangfu.agentflow.ai.model.ModelProviderRegistry;
+import com.wangfu.agentflow.ai.model.ModelRouter;
 import com.wangfu.agentflow.autoconfigure.extension.ExtensionRegistrar;
 import com.wangfu.agentflow.autoconfigure.extension.ExtensionScanner;
+import com.wangfu.agentflow.autoconfigure.model.ModelProviderRegistryInitializer;
 import com.wangfu.agentflow.extension.ExtensionRegistry;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -34,5 +37,26 @@ public class AgentFlowAutoConfiguration {
     @Bean
     public ExtensionRegistrar extensionRegistrar(ExtensionScanner scanner, ExtensionRegistry extensionRegistry) {
         return new ExtensionRegistrar(scanner, extensionRegistry);
+    }
+
+    @Bean
+    public ModelProviderRegistry modelProviderRegistry() {
+        return new ModelProviderRegistry();
+    }
+
+    @Bean
+    public ModelProviderRegistryInitializer modelProviderRegistryInitializer(
+            ExtensionRegistry extensionRegistry,
+            ModelProviderRegistry modelProviderRegistry) {
+
+        return new ModelProviderRegistryInitializer(
+                extensionRegistry,
+                modelProviderRegistry
+        );
+    }
+
+    @Bean
+    public ModelRouter modelRouter(ModelProviderRegistry registry) {
+        return new ModelRouter(registry);
     }
 }

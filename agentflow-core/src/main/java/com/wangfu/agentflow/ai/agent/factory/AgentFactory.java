@@ -15,6 +15,7 @@ public class AgentFactory {
     public Agent create(com.wangfu.agentflow.ai.agent.annotation.Agent agent) {
         return Agent.builder()
                 .modelOptions(ModelOptions.builder()
+                        .provider(agent.provider())
                         .model(agent.model())
                         .build())
                 .name(agent.name())

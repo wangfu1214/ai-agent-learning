@@ -16,6 +16,11 @@ public @interface Agent {
     String name();
 
     /**
+     * 模型供应商
+     */
+    String provider() default "";
+
+    /**
      * Agent 描述
      */
     String description() default "";

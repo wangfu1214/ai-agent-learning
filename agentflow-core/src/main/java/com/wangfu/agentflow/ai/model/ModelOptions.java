@@ -8,6 +8,15 @@ import lombok.Data;
 public class ModelOptions {
 
     /**
+     * Provider 名称
+     * 例如:
+     * spring-ai
+     * openai
+     * deepseek
+     */
+    private String provider;
+
+    /**
      * 模型名称
      */
     private String model;
