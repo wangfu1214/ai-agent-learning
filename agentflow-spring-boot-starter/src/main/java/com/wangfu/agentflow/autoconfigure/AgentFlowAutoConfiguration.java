@@ -1,7 +1,12 @@
 package com.wangfu.agentflow.autoconfigure;
 
+import com.wangfu.agentflow.autoconfigure.extension.ExtensionRegistrar;
+import com.wangfu.agentflow.autoconfigure.extension.ExtensionScanner;
+import com.wangfu.agentflow.extension.ExtensionRegistry;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,4 +20,19 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties(AgentFlowProperties.class)
 @ComponentScan(basePackages = "com.wangfu.agentflow.ai")
 public class AgentFlowAutoConfiguration {
+
+    @Bean
+    public ExtensionRegistry extensionRegistry() {
+        return new ExtensionRegistry();
+    }
+
+    @Bean
+    public ExtensionScanner extensionScanner(ApplicationContext applicationContext) {
+        return new ExtensionScanner(applicationContext);
+    }
+
+    @Bean
+    public ExtensionRegistrar extensionRegistrar(ExtensionScanner scanner, ExtensionRegistry extensionRegistry) {
+        return new ExtensionRegistrar(scanner, extensionRegistry);
+    }
 }
